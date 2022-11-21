@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32014.148
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JCat.BaseService", "JCat.BaseService\JCat.BaseService.csproj", "{70257452-A0F2-445F-A5E6-7EE7CDD2C5ED}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Example", "Example", "{94507FD2-E088-4FCC-B99A-E6976A03E039}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JCatBaseApi", "Example\JCatBaseApi\JCatBaseApi.csproj", "{53837587-7CD4-406A-B01D-430D0FB3E023}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{70257452-A0F2-445F-A5E6-7EE7CDD2C5ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{70257452-A0F2-445F-A5E6-7EE7CDD2C5ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{70257452-A0F2-445F-A5E6-7EE7CDD2C5ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{70257452-A0F2-445F-A5E6-7EE7CDD2C5ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{53837587-7CD4-406A-B01D-430D0FB3E023}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53837587-7CD4-406A-B01D-430D0FB3E023}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53837587-7CD4-406A-B01D-430D0FB3E023}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53837587-7CD4-406A-B01D-430D0FB3E023}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{53837587-7CD4-406A-B01D-430D0FB3E023} = {94507FD2-E088-4FCC-B99A-E6976A03E039}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AFD3DD3C-3D89-411A-A41F-FC35D35F8C71}
+	EndGlobalSection
+EndGlobal
