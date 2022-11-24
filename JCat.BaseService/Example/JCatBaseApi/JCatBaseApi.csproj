@@ -10,4 +10,14 @@
     <Folder Include="Controller\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\JCat.BaseService\JCat.BaseService.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update=".version">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>

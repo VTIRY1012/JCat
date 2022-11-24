@@ -13,14 +13,15 @@ namespace JCat.BaseService.Converter
             return options;
         }
 
-        private static JsonSerializerOptions _baseOption = new JsonSerializerOptions()
-        {
-            DictionaryKeyPolicy = JsonNamingPolicy.CamelCase,
-            PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
-            PropertyNameCaseInsensitive = true,
-            IgnoreReadOnlyProperties = true,
-            WriteIndented = true
-        };
+        private static JsonSerializerOptions _baseOption =>            
+            new JsonSerializerOptions()
+            {
+                DictionaryKeyPolicy = JsonNamingPolicy.CamelCase,
+                PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
+                PropertyNameCaseInsensitive = true,
+                IgnoreReadOnlyProperties = true,
+                WriteIndented = true
+            };
     }
 
     public static class JsonSettings

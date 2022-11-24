@@ -8,7 +8,7 @@ namespace JCat.BaseService.Config
     public sealed class EnvironmentMode
     {
         public static JRunTime RunTimeSettings { get; private set; } = new JRunTime();
-        public void Initialize(JRunTime runTime)
+        public static void Initialize(JRunTime runTime)
         {
             RunTimeSettings = runTime;
             RunTimeSettings._ts = DateTime.UtcNow;

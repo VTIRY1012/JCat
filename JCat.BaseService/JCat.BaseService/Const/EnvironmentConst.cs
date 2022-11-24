@@ -17,6 +17,12 @@
         public const string Preproduction = "preprod";
         public const string Production = "prod";
     }
+    public sealed class EnvironmentVariablesConst
+    {
+        public const string ModeKey = "ASPNETCORE_ENVIRONMENT";
+        public const string ApplicationKey = "ApplicationKey";
+        public const string ApplicationName = "ApplicationName";
+    }
 
     public sealed class VersionConst
     {
