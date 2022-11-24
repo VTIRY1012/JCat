@@ -149,5 +149,7 @@ namespace JCat.BaseService.Extensions.Service
         }
 
         public static bool IsSuccessStatusCode(this HttpStatusCode statusCode) => ((int)statusCode >= 200) && ((int)statusCode <= 299);
+        public static bool IsBadRequestStatusCode(this HttpStatusCode statusCode) => ((int)statusCode >= 400) && ((int)statusCode <= 499);
+        public static bool IsSystemErrorStatusCode(this HttpStatusCode statusCode) => ((int)statusCode >= 500) && ((int)statusCode <= 599);
     }
 }

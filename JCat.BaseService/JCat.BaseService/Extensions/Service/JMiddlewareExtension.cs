@@ -8,6 +8,7 @@ namespace JCat.BaseService.Extensions.Service
         public static void AddBaseMiddleware(this IApplicationBuilder app)
         {
             app.UseMiddleware<JBaseMiddleware>();
+            app.UseMiddleware<JLoggerMiddleware>();
         }
     }
 }

@@ -63,14 +63,15 @@ namespace JCat.BaseService.Extensions.Service
             return str;
         }
 
-        public static string ToJsonString(this JHttpContextResult result)
+        public static string ToNewtonJsonString<T>(this T source) where T : new()
         {
-            if (result.IsNull())
+            if (source.IsNull())
             {
                 return StringConst.Empty;
             }
-
-            return result.ToJsonString();
+            // bug : system.text.json / JsonSerializer / Serialize
+            var str = Newtonsoft.Json.JsonConvert.SerializeObject(source);
+            return str;
         }
     }
 }

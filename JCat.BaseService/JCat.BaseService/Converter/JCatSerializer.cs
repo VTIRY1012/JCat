@@ -19,7 +19,7 @@ namespace JCat.BaseService.Converter
         }
 
         [return: MaybeNull]
-        public static string Serialize<TValue>(TValue value, JsonSerializerOptions? options = null) where TValue : new()
+        public static string Serialize<TValue>(TValue value, JsonSerializerOptions? options = null)
         {
             if (value.IsNull())
             {

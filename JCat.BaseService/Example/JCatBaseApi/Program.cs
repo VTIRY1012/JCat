@@ -18,7 +18,8 @@ builder.Services.AddControllers().AddJsonOptions(options => options.JsonSerializ
 var app = builder.Build();
 
 // todo: test cors
-app.UseCors(policy => {
+app.UseCors(policy =>
+{
     policy
     .AllowAnyOrigin()
     .AllowAnyHeader()

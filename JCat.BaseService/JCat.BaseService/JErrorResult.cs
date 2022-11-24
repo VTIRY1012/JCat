@@ -1,5 +1,4 @@
-﻿using JCat.BaseService.Const;
-using JCat.BaseService.Extensions.BaseType;
+﻿using JCat.BaseService.Extensions.BaseType;
 
 namespace JCat.BaseService
 {

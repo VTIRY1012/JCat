@@ -13,7 +13,7 @@ namespace JCat.BaseService.Converter
             return options;
         }
 
-        private static JsonSerializerOptions _baseOption =>            
+        private static JsonSerializerOptions _baseOption =>
             new JsonSerializerOptions()
             {
                 DictionaryKeyPolicy = JsonNamingPolicy.CamelCase,
