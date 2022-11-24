@@ -3,7 +3,6 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using System.Net;
 using System.Text;
-using System.Text.Json;
 
 namespace JCat.BaseService.Middleware
 {
@@ -28,7 +27,6 @@ namespace JCat.BaseService.Middleware
             // Response.
             apiContext.ResponseResult = GetResponse(context);
             apiContext.ResponseResult.Result = respBody;
-            var t = JsonSerializer.Serialize(apiContext);
 
             var statusCode = apiContext.ResponseResult.StatusCode;
             if (statusCode.IsSuccessStatusCode())

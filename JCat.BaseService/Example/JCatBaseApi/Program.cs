@@ -33,5 +33,5 @@ app.AddBaseMiddleware();
 
 // Routes
 app.MapGet("/", async Task<JResult> () => await Task.FromResult(new JResult(HttpStatusCode.OK, "Healthy")));
-
+app.MapControllers();
 app.Run();

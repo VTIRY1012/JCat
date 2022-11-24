@@ -19,7 +19,7 @@ namespace JCat.BaseService.Converter
                 DictionaryKeyPolicy = JsonNamingPolicy.CamelCase,
                 PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
                 PropertyNameCaseInsensitive = true,
-                IgnoreReadOnlyProperties = true,
+                //IgnoreReadOnlyProperties = true,
                 WriteIndented = true
             };
     }
@@ -31,7 +31,7 @@ namespace JCat.BaseService.Converter
             options.DictionaryKeyPolicy = JsonNamingPolicy.CamelCase;
             options.PropertyNamingPolicy = JsonNamingPolicy.CamelCase;
             options.PropertyNameCaseInsensitive = true;
-            options.IgnoreReadOnlyProperties = true;
+            //options.IgnoreReadOnlyProperties = true;
             options.WriteIndented = true;
             options.AddBaseConverters();
         }
