@@ -2,6 +2,7 @@ using JCat.BaseService;
 using JCat.BaseService.Converter;
 using JCat.BaseService.Extensions;
 using JCat.BaseService.Extensions.Service;
+using JCatService;
 using System.Net;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -14,7 +15,8 @@ builder.Services.AddHttpClient();
 builder.Services.AddCors();
 builder.Services.AddHttpContextAccessor();
 builder.Services.AddControllers().AddJsonOptions(options => options.JsonSerializerOptions.AddBaseJsonSettings());
-
+builder.Services.AddBOServices();
+builder.Services.AddBORepositories();
 var app = builder.Build();
 
 // todo: test cors
@@ -25,7 +27,6 @@ app.UseCors(policy =>
     .AllowAnyHeader()
     .AllowAnyMethod();
 });
-// Services
 app.UseStaticFiles();
 app.UseRouting();
 app.UseAuthorization();

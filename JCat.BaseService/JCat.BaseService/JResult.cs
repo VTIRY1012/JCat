@@ -46,6 +46,19 @@ namespace JCat.BaseService
         public string ErrorMessage { get; set; } = string.Empty;
     }
 
+    public class JListResult<T>
+    {
+        /// <summary>
+        /// List Content
+        /// </summary>
+        public List<T> Items { get; set; } = new List<T>();
+
+        /// <summary>
+        /// Search List Count
+        /// </summary>
+        public int TotalCount { get; set; }
+    }
+
     public sealed class JHttpContextResult
     {
         public JHttpContextRequestResult RequestResult =
