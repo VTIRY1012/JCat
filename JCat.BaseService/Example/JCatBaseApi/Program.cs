@@ -19,7 +19,6 @@ builder.Services.AddBOServices();
 builder.Services.AddBORepositories();
 var app = builder.Build();
 
-// todo: test cors
 app.UseCors(policy =>
 {
     policy

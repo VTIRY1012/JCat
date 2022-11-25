@@ -1,0 +1,87 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script>
+        var baseUrl = "https://localhost:7048/";
+        Get();
+        Create();
+        Update();
+        Delete();
+
+        function Get() {
+            var settings = {
+                "url": baseUrl + "ServiceExample/Get",
+                "method": "GET",
+                "timeout": 0,
+            };
+
+            $.ajax(settings).done(function (response) {
+                console.log(response);
+            });
+        }
+
+        function Create() {
+            var settings = {
+                "url": baseUrl + "ServiceExample/Create",
+                "method": "POST",
+                "timeout": 0,
+                "headers": {
+                    "Content-Type": "application/json"
+                },
+                "data": JSON.stringify({
+                    "date": "2020-10-14",
+                    "temperatureC": 25,
+                    "summary": "Hot"
+                }),
+            };
+
+            $.ajax(settings).done(function (response) {
+                console.log(response);
+            });
+        }
+
+        function Update() {
+            var settings = {
+                "url": baseUrl + "ServiceExample/Update/123",
+                "method": "PUT",
+                "timeout": 0,
+                "headers": {
+                    "Content-Type": "application/json"
+                },
+                "data": JSON.stringify({
+                    "date": "2020-10-14",
+                    "temperatureC": 25,
+                    "summary": "Hot"
+                }),
+            };
+
+            $.ajax(settings).done(function (response) {
+                console.log(response);
+            });
+        }
+
+        function Delete() {
+            var settings = {
+                "url": baseUrl + "ServiceExample/Delete",
+                "method": "DELETE",
+                "timeout": 0,
+                "headers": {
+                    "Content-Type": "application/json"
+                },
+                "data": JSON.stringify({
+                    "id": "123"
+                }),
+            };
+
+            $.ajax(settings).done(function (response) {
+                console.log(response);
+            });
+        }
+    </script>
+</body>
+</html>
