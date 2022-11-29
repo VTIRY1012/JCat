@@ -15,7 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\JCatEndpointModel\JCatEndpointModel.csproj" />
+    <ProjectReference Include="..\JCatEndpointModel\JCatEndpointModel.csproj" />
   </ItemGroup>
 
 </Project>
