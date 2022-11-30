@@ -7,7 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\JCat.BaseService\JCat.BaseService.csproj" />
     <ProjectReference Include="..\JCatBaseService\JCatService.csproj" />
   </ItemGroup>
 

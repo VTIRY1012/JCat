@@ -13,6 +13,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JCatService", "Example\JCat
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JCatEndpointModel", "Example\JCatEndpointModel\JCatEndpointModel.csproj", "{BF387ECA-5878-478F-8801-DE437E5DBD22}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JCat.Mysql.DataAccess", "JCat.Mysql.DataAccess\JCat.Mysql.DataAccess.csproj", "{89E5DCA1-2705-4E18-8AC3-44B1A622B3E1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,6 +37,10 @@ Global
 		{BF387ECA-5878-478F-8801-DE437E5DBD22}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BF387ECA-5878-478F-8801-DE437E5DBD22}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BF387ECA-5878-478F-8801-DE437E5DBD22}.Release|Any CPU.Build.0 = Release|Any CPU
+		{89E5DCA1-2705-4E18-8AC3-44B1A622B3E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{89E5DCA1-2705-4E18-8AC3-44B1A622B3E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{89E5DCA1-2705-4E18-8AC3-44B1A622B3E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{89E5DCA1-2705-4E18-8AC3-44B1A622B3E1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
