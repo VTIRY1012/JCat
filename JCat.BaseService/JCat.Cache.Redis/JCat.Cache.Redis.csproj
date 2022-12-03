@@ -8,6 +8,7 @@
     <PackageTags>JCat Library</PackageTags>
     <Version>1.0.0</Version>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <PackageProjectUrl>https://github.com/VTIRY1012/JCat</PackageProjectUrl>
   </PropertyGroup>
 
   <ItemGroup>
