@@ -62,6 +62,10 @@ namespace JCat.BaseService.Util
                 responseString = JsonSerializer.Serialize(responseObj, JsonSettings.AddIgnoreNullValues(JCatConverterSettings.GetBaseOptions()));
             }
 
+            if (responseString.IsNull())
+            {
+                responseString = "null";
+            }
             var bytes = Encoding.UTF8.GetBytes(responseString);
             await originalRespBodyStream.WriteAsync(bytes, 0, bytes.Length);
         }

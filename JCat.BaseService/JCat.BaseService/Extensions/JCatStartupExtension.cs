@@ -43,8 +43,5 @@ namespace JCat.BaseService.Extensions
         {
 
         }
-
-        // todo: coming soon, read config server.
-        // todo: coming soon, cache library.
     }
 }

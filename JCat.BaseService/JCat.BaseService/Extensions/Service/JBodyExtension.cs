@@ -3,6 +3,8 @@ using JCat.BaseService.Converter;
 using JCat.BaseService.Extensions.BaseType;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Primitives;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace JCat.BaseService.Extensions.Service
 {
@@ -70,7 +72,14 @@ namespace JCat.BaseService.Extensions.Service
                 return StringConst.Empty;
             }
             // bug : system.text.json / JsonSerializer / Serialize
-            var str = Newtonsoft.Json.JsonConvert.SerializeObject(source);
+            var settings = new JsonSerializerSettings()
+            {
+                ReferenceLoopHandling = ReferenceLoopHandling.Ignore,
+                Formatting = Formatting.Indented,
+                NullValueHandling = NullValueHandling.Ignore
+            };
+            settings.Converters.Add(new JavaScriptDateTimeConverter());
+            var str = JsonConvert.SerializeObject(source, settings);
             return str;
         }
     }
