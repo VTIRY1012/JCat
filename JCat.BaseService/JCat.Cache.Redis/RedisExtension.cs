@@ -1,7 +1,6 @@
 ﻿using JCat.Cache.Redis.Interface;
 using JCat.Cache.Redis.Model;
 using Microsoft.Extensions.DependencyInjection;
-using System.Text.Json;
 
 namespace JCat.Cache.Redis;
 public static class RedisExtension

@@ -58,7 +58,7 @@ public class RedisController : BaseServiceController
     [Route("Prefix")]
     public async Task<JResult> SetPrefixAsync()
     {
-        var value = new TestRedisModel() { Id= 456, Name = "test2" };
+        var value = new TestRedisModel() { Id = 456, Name = "test2" };
         var result = await _prefixRedisCache.SetAsync(testKey, value);
         return Successed(result);
     }

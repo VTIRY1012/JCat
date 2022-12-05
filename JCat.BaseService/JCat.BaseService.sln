@@ -15,13 +15,21 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JCatEndpointModel", "Exampl
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JCat.Mysql.DataAccess", "JCat.Mysql.DataAccess\JCat.Mysql.DataAccess.csproj", "{89E5DCA1-2705-4E18-8AC3-44B1A622B3E1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JCat.Cache.Redis", "JCat.Cache.Redis\JCat.Cache.Redis.csproj", "{B0B4CCB4-678A-4B32-895D-217EC8571028}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JCat.Cache.Redis", "JCat.Cache.Redis\JCat.Cache.Redis.csproj", "{B0B4CCB4-678A-4B32-895D-217EC8571028}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BaseService", "BaseService", "{90A30032-4227-49D9-AEA8-217B07DA2318}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Redis", "Redis", "{57133CC8-5494-4F5D-AB8E-995A941AC21F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JCat.Cache.Api", "Example\Cache\JCat.Cache.Api\JCat.Cache.Api.csproj", "{4E0D7F52-7251-4F08-8FB2-EE76EE372CDD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JCat.Cache.Api", "Example\Cache\JCat.Cache.Api\JCat.Cache.Api.csproj", "{4E0D7F52-7251-4F08-8FB2-EE76EE372CDD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JCat.Notification.Email.Gamail", "JCat.Notification.Email.Gamail\JCat.Notification.Email.Gamail.csproj", "{BBACE0DF-68AC-40A7-BE61-95F6F347DCD7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JCat.Notification.Email", "JCat.Notification.Email\JCat.Notification.Email.csproj", "{00F1652F-2BB7-41A8-AE79-C5DEB0901CE3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Notification", "Notification", "{C06C4018-28E4-4F30-91EC-9A06AC540900}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JCat.Email.Gmail.Api", "Example\Notification\JCat.Email.Gmail\JCat.Email.Gmail.Api.csproj", "{D4ED57AE-48C9-4B1A-92F7-20B24AC0A61F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -57,6 +65,18 @@ Global
 		{4E0D7F52-7251-4F08-8FB2-EE76EE372CDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4E0D7F52-7251-4F08-8FB2-EE76EE372CDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4E0D7F52-7251-4F08-8FB2-EE76EE372CDD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BBACE0DF-68AC-40A7-BE61-95F6F347DCD7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BBACE0DF-68AC-40A7-BE61-95F6F347DCD7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BBACE0DF-68AC-40A7-BE61-95F6F347DCD7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BBACE0DF-68AC-40A7-BE61-95F6F347DCD7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{00F1652F-2BB7-41A8-AE79-C5DEB0901CE3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{00F1652F-2BB7-41A8-AE79-C5DEB0901CE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{00F1652F-2BB7-41A8-AE79-C5DEB0901CE3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{00F1652F-2BB7-41A8-AE79-C5DEB0901CE3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D4ED57AE-48C9-4B1A-92F7-20B24AC0A61F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4ED57AE-48C9-4B1A-92F7-20B24AC0A61F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4ED57AE-48C9-4B1A-92F7-20B24AC0A61F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4ED57AE-48C9-4B1A-92F7-20B24AC0A61F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -68,6 +88,8 @@ Global
 		{90A30032-4227-49D9-AEA8-217B07DA2318} = {94507FD2-E088-4FCC-B99A-E6976A03E039}
 		{57133CC8-5494-4F5D-AB8E-995A941AC21F} = {94507FD2-E088-4FCC-B99A-E6976A03E039}
 		{4E0D7F52-7251-4F08-8FB2-EE76EE372CDD} = {57133CC8-5494-4F5D-AB8E-995A941AC21F}
+		{C06C4018-28E4-4F30-91EC-9A06AC540900} = {94507FD2-E088-4FCC-B99A-E6976A03E039}
+		{D4ED57AE-48C9-4B1A-92F7-20B24AC0A61F} = {C06C4018-28E4-4F30-91EC-9A06AC540900}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {AFD3DD3C-3D89-411A-A41F-FC35D35F8C71}

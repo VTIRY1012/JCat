@@ -1,6 +1,4 @@
-﻿using JCat.Mysql.DataAccess.Enum;
-
-namespace JCat.Mysql.DataAccess.Model;
+﻿namespace JCat.Mysql.DataAccess.Model;
 public class BaseEntity
 {
     public string Status { get; set; } = string.Empty;
