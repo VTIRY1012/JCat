@@ -53,6 +53,17 @@ public class RedisCache : IRedisCache
         return default;
     }
 
+    public async Task<T> SetForeverAsync<T>(string key, T value, RedisDatabaseEnum redisDatabaseEnum = RedisDatabaseEnum.Important) where T : new()
+    {
+        var isSuccess = await Database((int)redisDatabaseEnum).StringSetAsync(key, RedisConvertor.Serialize(value));
+        if (isSuccess)
+        {
+            return value;
+        }
+
+        return default;
+    }
+
     public async Task<bool> RemoveAsnyc(string key, RedisDatabaseEnum redisDatabaseEnum = RedisDatabaseEnum.Important)
     {
         return await Database((int)redisDatabaseEnum).KeyDeleteAsync(key);
@@ -83,6 +94,12 @@ public class PrefixRedisCache : IPrefixRedisCache
     {
         key = ToPrefix(key);
         return await _redisCache.SetAsync<T>(key, value, seconds, redisDatabaseEnum);
+    }
+
+    public async Task<T> SetForeverAsync<T>(string key, T value, RedisDatabaseEnum redisDatabaseEnum = RedisDatabaseEnum.Important) where T : new()
+    {
+        key = ToPrefix(key);
+        return await _redisCache.SetForeverAsync<T>(key, value, redisDatabaseEnum);
     }
 
     public async Task<bool> RemoveAsnyc(string key, RedisDatabaseEnum redisDatabaseEnum = RedisDatabaseEnum.Important)

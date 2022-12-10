@@ -37,6 +37,14 @@ public class RedisController : BaseServiceController
         return Successed(result);
     }
 
+    [HttpPost]
+    [Route("Forever")]
+    public async Task<JResult> SetForeverAsync()
+    {
+        var result = await _redisCache.SetForeverAsync(testKey, new TestRedisModel());
+        return Successed(result);
+    }
+
     [HttpDelete]
     [Route("")]
     public async Task<JResult> RemoveAsync()
