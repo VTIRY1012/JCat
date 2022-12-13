@@ -3,13 +3,11 @@ public static class ModifyEntityExtension
 {
     public static TProp OriginOrNull<TProp>(this TProp originProp, TProp toProp)
     {
-        if (toProp == null)
+        if (toProp != null)
         {
-            return originProp;
+            originProp = toProp;
         }
-        else
-        {
-            return toProp;
-        }
+
+        return originProp;
     }
 }
