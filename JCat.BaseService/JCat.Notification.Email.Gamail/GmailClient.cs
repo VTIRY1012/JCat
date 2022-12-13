@@ -22,6 +22,16 @@ public class GmailClient : IGmailClient
         return result;
     }
 
+    public async Task<(bool isSuccess, string message)> SendUrlAndVerificationCodeHtmlAsync(string receiverMail, string url, string code)
+    {
+        var message = BaseMailMessage();
+        message.Subject = "Your e-mail login content";
+        message.Body = HtmlHelper.GetUrlAndVerificationCodeHtml(receiverMail, url, code);
+        message.To.Add(receiverMail);
+        var result = await _emailClient.SendMailAsync(message);
+        return result;
+    }
+
     public async Task<(bool isSuccess, string message)> ForgotPasswordAsync(string receiverMail, string newPassword)
     {
         var message = BaseMailMessage();

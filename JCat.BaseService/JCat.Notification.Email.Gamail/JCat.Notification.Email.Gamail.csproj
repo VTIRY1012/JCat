@@ -6,14 +6,10 @@
     <Nullable>enable</Nullable>
     <Authors>jack.tsai</Authors>
     <PackageTags>JCat Library</PackageTags>
-    <Version>1.0.0</Version>
+    <Version>1.0.1</Version>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <PackageProjectUrl>https://github.com/VTIRY1012/JCat</PackageProjectUrl>
   </PropertyGroup>
-
-  <ItemGroup>
-    <Folder Include="Html\" />
-  </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\JCat.Notification.Email\JCat.Notification.Email.csproj" />
@@ -21,6 +17,9 @@
 
   <ItemGroup>
     <None Update="Html\ForgotPassword.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Html\UrlAndVerificationCode.html">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Update="Html\VerificationCode.html">

@@ -28,8 +28,18 @@ public class GmailController : BaseServiceController
     }
 
     [HttpPost]
+    [Route("LoginContent")]
+    public async Task<JResult> SendUrlAndVerificationCodeAsync()
+    {
+        var code = GetNumber(6);
+        var testUrl = "www.google.com";
+        var result = await _gmailClient.SendUrlAndVerificationCodeHtmlAsync(email, testUrl, code);
+        return Successed(result.message);
+    }
+
+    [HttpPost]
     [Route("ForgotPassword")]
-    public async Task<JResult> Async()
+    public async Task<JResult> ForgotPasswordAsync()
     {
         var password = GetNumber(8);
         var result = await _gmailClient.ForgotPasswordAsync(email, password);

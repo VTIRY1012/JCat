@@ -9,6 +9,15 @@ internal static class HtmlHelper
             .Replace("{{code}}", code);
         return html;
     }
+    public static string GetUrlAndVerificationCodeHtml(string email, string url, string code)
+    {
+        string html = LoadUrlAndVerificationCodeHtml();
+        html = html
+            .Replace("{{receiverMail}}", email)
+            .Replace("{{url}}", url)
+            .Replace("{{code}}", code);
+        return html;
+    }
     public static string GetForgotPasswordHtml(string email, string newPassword)
     {
         string html = LoadForgotPasswordHtml();
@@ -28,6 +37,16 @@ internal static class HtmlHelper
         }
 
         return _verificationCodeHtml;
+    }
+    private static string _urlAndVerificationCodeHtml = "";
+    private static string LoadUrlAndVerificationCodeHtml()
+    {
+        if (string.IsNullOrWhiteSpace(_urlAndVerificationCodeHtml))
+        {
+            _urlAndVerificationCodeHtml = LoadHtml("UrlAndVerificationCode.html");
+        }
+
+        return _urlAndVerificationCodeHtml;
     }
     private static string _forgotPasswordHtml = "";
     private static string LoadForgotPasswordHtml()
