@@ -1,7 +1,10 @@
 using JCat.BaseService;
+using JCat.BaseService.Config;
 using JCat.BaseService.Converter;
 using JCat.BaseService.Extensions;
 using JCat.BaseService.Extensions.Service;
+using JCatBaseSDK;
+using JCatBaseSDK.Model;
 using JCatService;
 using System.Net;
 
@@ -17,6 +20,11 @@ builder.Services.AddHttpContextAccessor();
 builder.Services.AddControllers().AddJsonOptions(options => options.JsonSerializerOptions.AddBaseJsonSettings());
 builder.Services.AddBOServices();
 builder.Services.AddBORepositories();
+builder.Services.AddTestClient(options =>
+{
+    options.Settings = new TestClientSettings("https://localhost:7048", EnvironmentMode.RunTimeSettings.Application.ApplicationKey, JCatConverterSettings.GetBaseOptions());
+    options.Encoder = new TestAppKeyEncoder();
+});
 var app = builder.Build();
 
 app.UseCors(policy =>
